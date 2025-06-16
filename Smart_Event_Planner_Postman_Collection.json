@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "Smart Event Planner APIs",
+    "_postman_id": "12345678-1234-1234-1234-1234567890ab",
+    "description": "Postman collection to test the Smart Event Planner backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "\ud83d\udcc1 Event Management",
+      "item": [
+        {
+          "name": "\u27a4 Create Cricket Tournament (Mumbai, March 16)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Cricket Tournament\",\n    \"location\": \"Mumbai\",\n    \"date\": \"2025-03-16\",\n    \"event_type\": \"cricket\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "events"
+              ]
+            }
+          }
+        },
+        {
+          "name": "\u27a4 Create Wedding (Goa, December 10)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Wedding Event\",\n    \"location\": \"Goa\",\n    \"date\": \"2025-12-10\",\n    \"event_type\": \"wedding\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "events"
+              ]
+            }
+          }
+        },
+        {
+          "name": "\u27a4 List All Events",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "events"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "\ud83d\udcc1 Weather Integration",
+      "item": [
+        {
+          "name": "\u27a4 Get Weather for Mumbai (March 16)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/weather/Mumbai/2025-03-16",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "weather",
+                "Mumbai",
+                "2025-03-16"
+              ]
+            }
+          }
+        },
+        {
+          "name": "\u27a4 Check Weather Suitability for Cricket Event",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:8000/events/1/weather-check",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "events",
+                "1",
+                "weather-check"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
